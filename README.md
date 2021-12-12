@@ -70,8 +70,8 @@ contests --codeforces
    * [Kickstart](https://codingcompetitions.withgoogle.com/kickstart)
    
 # Contribute
-I want to add more features like 
+It will be very good if these features can be implemented in this app - 
 - Filter the contests according to a provided date
 - Show the output data in table format
 - Give it a good name XD <br/>
-So, you can add any of this features(not the last one XD) or find a new bug then please create an new issue.
+So, if you can add any of these features(not the last one XD) or find a new bug then please create a new issue.
