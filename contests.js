@@ -28,7 +28,7 @@ program
   const keys=Object.keys(options);
   if(keys.length===0){
     showMessage("Too few arguments provided",messageTypes.ERROR);
-    showMessage("Type <conteste -h> to get list of all commends",messageTypes.SUCCESS);
+    showMessage("Type <contests -h> to get list of all commands",messageTypes.SUCCESS);
   }
   else{
     for(let key in options){
