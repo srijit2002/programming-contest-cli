@@ -12,16 +12,16 @@ program
 
 program
   .usage('[options1, options2...]', 'shows details about upcoming contests')
-  .option(`-cf, --codeforces`, "contests in 24 hours on Codeforces",websiteTypes.CODEFORCES)
-  .option(`-cc, --codechef`, "contests in 24 hours on Codechef",websiteTypes.CODECHEF)
-  .option(`-tc, --topcoder`, "contests in 24 hours on Top Coder",websiteTypes.TOP_CODER)
-  .option(`-ac, --atcoder`, "contests in 24 hours on At Coder",websiteTypes.AT_CODER)
-  .option(`-cs, --csacademy`, "contests in 24 hours on CS Academy",websiteTypes.CS_ACADEMY)
-  .option(`-hr, --hackerrank`, "contests in 24 hours on Hacker Rank",websiteTypes.HACKERRANK)
-  .option(`-he, --hackerearth`, "contests in 24 hours on Hacker Earth",websiteTypes.HACKEREARTH)
-  .option(`-ks, --kickstart`, "contests in 24 hours on Google Kickstart",websiteTypes.KICK_START)
-  .option(`-lc --leetcode`, "contests in 24 hours on Leetcode",websiteTypes.LEETCODE)
-  .option(`-a --all`, "contests in 24 hours on all platforms",websiteTypes.ALL)
+  .option(`-cf, --codeforces`, "Upcoming contests on Codeforces",websiteTypes.CODEFORCES)
+  .option(`-cc, --codechef`, "Upcoming contests on Codechef",websiteTypes.CODECHEF)
+  .option(`-tc, --topcoder`, "Upcoming contests on Top Coder",websiteTypes.TOP_CODER)
+  .option(`-ac, --atcoder`, "Upcoming contests on At Coder",websiteTypes.AT_CODER)
+  .option(`-cs, --csacademy`, "Upcoming contests on CS Academy",websiteTypes.CS_ACADEMY)
+  .option(`-hr, --hackerrank`, "Upcoming contests on Hacker Rank",websiteTypes.HACKERRANK)
+  .option(`-he, --hackerearth`, "Upcoming contests on Hacker Earth",websiteTypes.HACKEREARTH)
+  .option(`-ks, --kickstart`, "Upcoming contests on Google Kickstart",websiteTypes.KICK_START)
+  .option(`-lc --leetcode`, "Upcoming contests on Leetcode",websiteTypes.LEETCODE)
+  .option(`-a --all`, "Upcoming contests on all platforms",websiteTypes.ALL)
   
   program.parse(process.argv);
   const options=program.opts();
@@ -33,7 +33,7 @@ program
   else{
     for(let key in options){
       fetchData(options[key]).then(response=>{
-        printTable(response.data);
+        printTable(response.data,options[key]);
         // console.log(response.data);
       }).catch(error=>{
         showMessage(error,messageTypes.ERROR);
