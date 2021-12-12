@@ -52,9 +52,9 @@ or
 contests --codeforces
 ```
 ![Demo image](https://i.ibb.co/LdB3VBM/codeforces.png)
-* Get information about multiple contests at specific websites at once
+* Get information about multiple contests of specific websites at once
 ```js
-  contests --codeforces --codechef --codechef --leetcode
+  contests --codeforces --codechef --leetcode
 ```
 ![Demo image](https://i.ibb.co/JpMsGfD/multiple.png)
 
